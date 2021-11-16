@@ -5,11 +5,9 @@ import common.PageTitles;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.PopularItemsPage;
 import pages.SearchItemPage;
 import url.Url;
 
-import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class HomePageSearchTest extends BaseTest {
