@@ -70,7 +70,7 @@ public class CreateAccountPage extends BasePage {
     @FindBy(id= "submitAccount")
     WebElement registerButton;
 
-    @FindBy(css = ".navigation_page:contains(\"My account\")")
+    @FindBy(xpath = "//span[contains(@class,'navigation_page') and contains(text(),'My account')]")
     static
     WebElement correctMyAccountPage;
 

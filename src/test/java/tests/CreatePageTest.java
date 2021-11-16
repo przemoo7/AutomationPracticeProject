@@ -51,4 +51,19 @@ public class CreatePageTest extends BaseTest {
         assertThat(CreateAccountPage.isRedAlertBoxDisplayed()).isTrue();
     }
 
+    @Test
+    void shouldNotAllowToSignInWithWrongEmail() {
+        topMenuPage.clickOnSignInLink();
+        signInFormPage.enterEmailRegister("mail.com");
+        signInFormPage.createAccountButtonClick();
+        assertThat(CreateAccountPage.isRedAlertBoxDisplayed()).isTrue();
+    }
+
+    @Test
+    void shouldNotAllowToSignInWithExistingEmail() {
+        topMenuPage.clickOnSignInLink();
+        signInFormPage.enterEmailRegister("test@test.pl");
+        signInFormPage.createAccountButtonClick();
+        assertThat(CreateAccountPage.isRedAlertBoxDisplayed()).isTrue();
+    }
 }
