@@ -3,6 +3,7 @@ package tests;
 import common.CommonData;
 import common.PageTitles;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.CreateAccountPage;
@@ -30,6 +31,7 @@ public class CreatePageTest extends BaseTest {
     }
 
     @Test
+    @Order(1)
     void createAccountCorrectTest() {
         topMenuPage.clickOnSignInLink();
         signInFormPage.enterEmailRegister(CommonData.EMAIL_ADDRESS);
@@ -45,6 +47,7 @@ public class CreatePageTest extends BaseTest {
     }
 
     @Test
+    @Order(2)
     void shouldNotAllowToSignInWithoutEmail(){
         topMenuPage.clickOnSignInLink();
         signInFormPage.createAccountButtonClick();
@@ -52,6 +55,7 @@ public class CreatePageTest extends BaseTest {
     }
 
     @Test
+    @Order(3)
     void shouldNotAllowToSignInWithWrongEmail() {
         topMenuPage.clickOnSignInLink();
         signInFormPage.enterEmailRegister("mail.com");
@@ -60,6 +64,7 @@ public class CreatePageTest extends BaseTest {
     }
 
     @Test
+    @Order(4)
     void shouldNotAllowToSignInWithExistingEmail() {
         topMenuPage.clickOnSignInLink();
         signInFormPage.enterEmailRegister("test@test.pl");
