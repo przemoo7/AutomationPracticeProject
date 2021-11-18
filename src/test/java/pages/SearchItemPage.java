@@ -39,7 +39,7 @@ public class SearchItemPage extends BasePage {
         searchTop.click();
     }
 
-    public void enterSearchWords(String searchWords){
+    public void enterSearchWords(String searchWords) {
         searchTop.sendKeys(searchWords);
     }
 
@@ -65,7 +65,6 @@ public class SearchItemPage extends BasePage {
                 .map(el -> el.getText().trim())
                 .collect(Collectors.toList());
     }
-
 
 
 }

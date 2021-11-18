@@ -10,10 +10,10 @@ public class TopMenuPage extends BasePage {
     @FindBy(linkText = "Contact us")
     WebElement contactUsLink;
 
-    @FindBy(linkText ="Sign in")
+    @FindBy(linkText = "Sign in")
     WebElement signInLink;
 
-    @FindBy(linkText ="Women")
+    @FindBy(linkText = "Women")
     WebElement womenLink;
 
     @FindBy(id = "subcategories")

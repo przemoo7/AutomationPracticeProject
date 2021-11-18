@@ -20,13 +20,13 @@ public class CreateAccountPage extends BasePage {
     @FindBy(id = "id_gender2")
     WebElement mrsTitleRadioButton;
 
-    @FindBy(id= "customer_firstname")
+    @FindBy(id = "customer_firstname")
     WebElement firstNameField;
 
     @FindBy(id = "customer_lastname")
     WebElement lastnameField;
 
-    @FindBy(id  = "passwd")
+    @FindBy(id = "passwd")
     WebElement passwordField;
 
     @FindBy(id = "days")
@@ -53,21 +53,21 @@ public class CreateAccountPage extends BasePage {
     @FindBy(id = "city")
     WebElement cityField;
 
-    @FindBy(id ="id_state")
+    @FindBy(id = "id_state")
     static
     WebElement stateField;
 
-    @FindBy(id ="postcode")
+    @FindBy(id = "postcode")
     WebElement postZipCodeField;
 
-    @FindBy(id ="id_country")
+    @FindBy(id = "id_country")
     static
     WebElement countryField;
 
-    @FindBy(id ="phone_mobile")
+    @FindBy(id = "phone_mobile")
     WebElement mobilePhoneField;
 
-    @FindBy(id= "submitAccount")
+    @FindBy(id = "submitAccount")
     WebElement registerButton;
 
     @FindBy(xpath = "//span[contains(@class,'navigation_page') and contains(text(),'My account')]")
@@ -79,29 +79,29 @@ public class CreateAccountPage extends BasePage {
     WebElement redAlertBox;
 
 
-    public void mrTitleClick(){
+    public void mrTitleClick() {
         wait.until(ExpectedConditions.visibilityOf(mrTitleRadioButton));
         mrTitleRadioButton.click();
     }
 
-    public void MrsTitleClick(){
+    public void MrsTitleClick() {
         wait.until(ExpectedConditions.visibilityOf(mrsTitleRadioButton));
         mrsTitleRadioButton.click();
     }
 
-    public void enterFirstNameField(){
+    public void enterFirstNameField() {
         firstNameField.sendKeys(CommonData.FIRSTNAME);
     }
 
-    public void enterLastnameField(){
+    public void enterLastnameField() {
         lastnameField.sendKeys(CommonData.LASTNAME);
     }
 
-    public void enterNewPassword(){
+    public void enterNewPassword() {
         passwordField.sendKeys(CommonData.PASSWORD);
     }
 
-    public void enterDateOfBirth(){
+    public void enterDateOfBirth() {
         Select dayOfBirth = new Select(CreateAccountPage.dayOfBirth);
         dayOfBirth.selectByIndex(2);
 
@@ -112,7 +112,7 @@ public class CreateAccountPage extends BasePage {
         yearOfBirth.selectByValue("1991");
     }
 
-    public void enterAddressInformation(){
+    public void enterAddressInformation() {
 //        addressFirstNameField.sendKeys(CommonData.FIRSTNAME);
 //        addressLastNameField.sendKeys(CommonData.LASTNAME);
         addressField.sendKeys(CommonData.ADDRESS);
