@@ -31,7 +31,7 @@ class ContactUsTest extends BaseTest {
 
     @Test
     @Order(1)
-    public void shouldNotAllowToSendEmptyContactUsForm(){
+    public void shouldNotAllowToSendEmptyContactUsForm() {
         topMenuPage.clickOnContactUsLink();
         contactUsFormPage.clickOnSendButton();
         assertThat(contactUsFormPage.isRedAlertBoxDisplayed()).isTrue();

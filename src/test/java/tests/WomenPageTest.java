@@ -32,9 +32,9 @@ public class WomenPageTest extends BaseTest {
     public void shouldSeeTheListOfPrices() {
         WomenItemsPage.clickOnWomensButton();
 
-        List<Double> WomenPricesList = WomenItemsPage.getProductPrices();
+        List<Double> womenPricesList = WomenItemsPage.getProductPrices();
 
-        List<Double> listOfPricesLowerOrEqualZero = WomenPricesList.stream()
+        List<Double> listOfPricesLowerOrEqualZero = womenPricesList.stream()
                 .filter(el -> el <= 0)
                 .collect(Collectors.toList());
 

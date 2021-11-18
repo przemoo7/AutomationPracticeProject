@@ -48,7 +48,7 @@ public class CreatePageTest extends BaseTest {
 
     @Test
     @Order(2)
-    void shouldNotAllowToSignInWithoutEmail(){
+    void shouldNotAllowToSignInWithoutEmail() {
         topMenuPage.clickOnSignInLink();
         signInFormPage.createAccountButtonClick();
         assertThat(CreateAccountPage.isRedAlertBoxDisplayed()).isTrue();
